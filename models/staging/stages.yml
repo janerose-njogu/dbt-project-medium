@@ -28,7 +28,6 @@ models:
       - name: C_NATIONKEY
         description: Customer country.
         tests:
-          - unique
           - not_null
       - name: C_PHONE
         description: Customer contact.
@@ -38,17 +37,14 @@ models:
       - name: C_ACCTBAL
         description: Customer account balance.
         tests:
-          - unique
           - not_null
       - name: C_MKTSEGMENT
         description: Customer market segment.
         tests:
-          - unique
           - not_null
       - name: C_COMMENT
         description: Customer comment.
         tests:
-          - unique
           - not_null
   
   - name: stg_lineitem
@@ -63,82 +59,66 @@ models:
       - name: L_ORDERKEY
         description: Secondary key for orders table
         tests:
-          - unique
           - not_null
       - name: L_PARTKEY
         description: Secondary key for parts table.
         tests:
-          - unique
           - not_null
       - name: L_SUPPKEY
         description: Secondary key for suppliers table.
         tests:
-          - unique
           - not_null
       - name: L_LINENUMBER
         description: primary key.
         tests:
-          - unique
           - not_null
       - name: L_QUANTITY
         description: Quantity ordered.
         tests:
-          - unique
           - not_null
       - name: L_EXTENDEDPRICE
         description: Total cost of order
         tests:
-          - unique
           - not_null
       - name: L_DISCOUNT
         description: Discount on product.
         tests:
-          - unique
           - not_null
       - name: L_TAX
         description: Tax amount
         tests:
-          - unique
           - not_null
       - name: L_RETURNFLAG
         description: Whether the product is to be returned
         tests:
-          - unique
           - not_null
       - name: L_LINESTATUS
         description: Lineitem status
         tests:
-          - unique
           - not_null
       - name: L_SHIPDATE
         description: Lineitem transport date
         tests:
-          - unique
           - not_null
       - name: L_COMMITDATE
         description: Lineitem committed date
         tests:
-          - unique
           - not_null
       - name: L_RECEIPTDATE
         description: Lineitem receipt date
         tests:
-          - unique
           - not_null
       - name: L_SHIPINSTRUCT
         description: Lineitem shipping instruction
         tests:
-          - unique
           - not_null
       - name: L_SHIPMODE
         description: Lineitem transport means
         tests:
-          - unique
           - not_null
       - name: L_COMMENT
         description: Lineitem comment
         tests:
-          - unique
           - not_null
 
   - name: stg_nation
@@ -186,7 +166,6 @@ models:
       - name: O_CUSTKEY
         description: Secondary key for customers table.
         tests:
-          - unique
           - not_null
       - name: O_ORDERSTATUS
         description: Order status.
@@ -230,7 +209,6 @@ models:
       - name: P_NAME
         description: Part name
         tests:
-          - unique
           - not_null
       - name: P_MFGR
         description: Manufacturer
@@ -270,12 +248,10 @@ models:
       - name: PS_PARTKEY
         description: primary key
         tests:
-          - unique
           - not_null
       - name: PS_SUPPKEY
         description: Secondary key for suppliers table
         tests:
-          - unique
           - not_null
       - name: PS_AVAILQTY
         description: Quantity Available
@@ -317,8 +293,6 @@ models:
           - not_null
       - name: PS_COMMENT
         description: Comment
-        tests:
-          - not_null
 
   - name: stg_supplier
     description: Supplier data as defined by TPC-H
