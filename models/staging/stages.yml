@@ -240,33 +240,13 @@ models:
         tests:
           - unique
           - not_null
-      - name: L_DISCOUNT
-        description: Discount
-        tests:
-          - unique
-          - not_null
       - name: L_TAX
         description: Tax/Levy.
         tests:
           - unique
           - not_null
-      - name: L_QUANTITY
-        description: Quantity available.
-        tests:
-          - unique
-          - not_null
-      - name: L_EXTENDEDPRICE
-        description: Total cost.
-        tests:
-          - unique
-          - not_null
       - name: L_DISCOUNT
         description: Discount
-        tests:
-          - unique
-          - not_null
-      - name: L_TAX
-        description: Tax/Levy.
         tests:
           - unique
           - not_null
@@ -397,10 +377,6 @@ models:
           - not_null
       - name: O_SHIPPRIORITY
         description: Order ship priority
-          - not_null
-      - name: O_CLERK
-        description: Order Clerk
-        tests:
           - not_null
       - name: O_COMMENT
         description: Comment
