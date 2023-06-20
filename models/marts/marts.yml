@@ -1,0 +1,203 @@
+version: 2
+
+models:
+  - name: dim_customers
+    description: Customer dimension data
+    config:
+      materialized: table
+      pre-hook: ""
+      post-hook: ""
+      database: PC_COALESCE_DB
+      schema: DBT_JANEROSE
+    columns:
+      - name: DIM_CUSTOMER_KEY
+        description: The primary key for customers.
+      - name: C_CUSTKEY
+        description: The primary key for customers.
+        tests:
+          - unique
+          - not_null
+      - name: C_NAME
+        description: Customer name.
+        tests:
+          - unique
+          - not_null
+      - name: C_ADDRESS
+        description: Customer address.
+        tests:
+          - unique
+          - not_null
+      - name: C_NATIONKEY
+        description: Customer country.
+        tests:
+          - not_null
+      - name: C_PHONE
+        description: Customer contact.
+        tests:
+          - unique
+          - not_null
+      - name: C_ACCTBAL
+        description: Customer account balance.
+        tests:
+          - not_null
+      - name: C_MKTSEGMENT
+        description: Customer market segment.
+        tests:
+          - not_null
+      - name: C_COMMENT
+        description: Customer comment.
+        tests:
+          - not_null        
+  
+  - name: dim_partsupp
+    description: Dimension data for part supply
+    config:
+      materialized: table
+      pre-hook: ""
+      post-hook: ""
+      database: PC_COALESCE_DB
+      schema: DBT_JANEROSE
+    columns:
+      - name: DIM_PARTSUPP_KEY
+        description: Secondary key for partsupp table
+      - name: PS_PARTKEY
+        description: Secondary key for parts table.
+        tests:
+          - not_null
+      - name: PS_SUPPKEY
+        description: Secondary key for suppliers table.
+        tests:
+          - not_null
+      - name: PS_AVAILQTY
+        description: Quantity Available
+        tests:
+          - not_null
+      - name: PS_SUPPLYCOST
+        description: Cost of supply
+        tests:
+          - not_null
+
+  - name: dim_supplier
+    description: Dimension data for suppliers
+    config:
+      materialized: table
+      pre-hook: ""
+      post-hook: ""
+      database: PC_COALESCE_DB
+      schema: DBT_JANEROSE
+    columns:
+      - name: DIM_SUPPLIER_KEY
+        description: Secondary key for suppliers table
+      - name: S_SUPPKEY
+        description: primary key
+        tests:
+          - unique
+          - not_null
+      - name: S_NAME
+        description: Supplier name
+        tests:
+          - unique
+          - not_null
+      - name: S_ADDRESS
+        description: Supplier address
+        tests:
+          - unique
+          - not_null
+      - name: S_NATIONKEY
+        description: Supplier country.
+        tests:
+          - not_null
+      - name: S_PHONE
+        description: Supplier contact
+        tests:
+          - unique
+          - not_null
+      - name: S_ACCTBAL
+        description: Account balance
+        tests:
+          - not_null
+      - name: S_COMMENT
+        description: comments
+        tests:
+          - unique
+          - not_null
+
+  - name: fct_lineitem_orders_dim_lookup
+    description: Lookup table for dimension tables
+    config:
+      materialized: table
+      pre-hook: ""
+      post-hook: ""
+      database: PC_COALESCE_DB
+      schema: DBT_JANEROSE
+    columns:
+      - name: O_CUSTKEY
+        description: Secondary key for customers.
+      - name: L_PARTKEY
+        description: Secondary key for parts.
+      - name: L_SUPPKEY
+        description: Secondary key for suppliers.
+      - name: PS_SUPPLYCOST
+        description: Supply cost.
+      - name: O_ORDERKEY
+        description: Secondary key for orders table.
+      - name: O_ORDERSTATUS
+        description: Order status.
+      - name: PS_AVAILQTY
+        description: Quantity available.
+      - name: O_TOTALPRICE
+        description: Total cost.
+      - name: O_ORDERDATE
+        description: Order date.
+      - name: O_ORDERPRIORITY_NUM
+        description: Order priority number.
+      - name: O_ORDERPRIORITY_DESC
+        description: Order priority description.
+      - name: O_CLERK
+        description: Order clerk.
+      - name: O_SHIPPRIORITY
+        description: Shipping priority.
+      - name: O_COMMENT
+        description: Comment.
+      - name: L_ORDERKEY
+        description: Secondary key for Lineitem table.
+      - name: L_LINENUMBER
+        description: Secondary key for Lineitem number.
+      - name: L_QUANTITY
+        description: Quantity available.
+      - name: L_EXTENDEDPRICE
+        description: Total cost.
+      - name: L_TAX
+        description: Tax/Levy.
+      - name: L_DISCOUNT
+        description: Discount
+      - name: L_RETURNFLAG
+        description: Return flag.
+      - name: L_LINESTATUS
+        description: Line status
+      - name: L_SHIPDATE
+        description: Shipping date.
+      - name: L_COMMITDATE
+        description: Commiting date.
+      - name: L_RECEIPTDATE
+        description: Recipt date.
+      - name: L_SHIPINSTRUCT
+        description: Shipping instruction.
+      - name: L_SHIPMODE
+        description: Means of shipping.
+      - name: L_COMMENT
+        description: Comment.
+      - name: PS_PARTKEY
+        description: Secondary key for parts.
+      - name: PS_SUPPKEY
+        description: Secondary key for suppliers.
+      - name: PS_COMMENT
+        description: Comments.
+      - name: DAYSTOSHIP
+        description: Number of days to ship.
+      - name: DIM_SUPPLIER_KEY
+        description: Supplier key from dimension supplier table
+      - name: DIM_CUSTOMER_KEY
+        description: Customer key from dimension customer table
+      - name: DIM_PARTSUPP_KEY
+        description: Partsupp key from dimension partsupp table

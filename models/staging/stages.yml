@@ -1,0 +1,334 @@
+version: 2
+
+models:
+  - name: stg_customers
+    description: Customer data as defined by TPC-H
+    config:
+      materialized: table
+      pre-hook: ""
+      post-hook: ""
+      database: PC_COALESCE_DB
+      schema: DBT_JANEROSE
+    columns:
+      - name: C_CUSTKEY
+        description: The primary key for customers.
+        tests:
+          - unique
+          - not_null
+      - name: C_NAME
+        description: Customer name.
+        tests:
+          - unique
+          - not_null
+      - name: C_ADDRESS
+        description: Customer address.
+        tests:
+          - unique
+          - not_null
+      - name: C_NATIONKEY
+        description: Customer country.
+        tests:
+          - not_null
+      - name: C_PHONE
+        description: Customer contact.
+        tests:
+          - unique
+          - not_null
+      - name: C_ACCTBAL
+        description: Customer account balance.
+        tests:
+          - not_null
+      - name: C_MKTSEGMENT
+        description: Customer market segment.
+        tests:
+          - not_null
+      - name: C_COMMENT
+        description: Customer comment.
+        tests:
+          - not_null
+  
+  - name: stg_lineitem
+    description: Lineitem data as defined by TPC-H
+    config:
+      materialized: table
+      pre-hook: ""
+      post-hook: ""
+      database: PC_COALESCE_DB
+      schema: DBT_JANEROSE
+    columns:
+      - name: L_ORDERKEY
+        description: Secondary key for orders table
+        tests:
+          - not_null
+      - name: L_PARTKEY
+        description: Secondary key for parts table.
+        tests:
+          - not_null
+      - name: L_SUPPKEY
+        description: Secondary key for suppliers table.
+        tests:
+          - not_null
+      - name: L_LINENUMBER
+        description: primary key.
+        tests:
+          - not_null
+      - name: L_QUANTITY
+        description: Quantity ordered.
+        tests:
+          - not_null
+      - name: L_EXTENDEDPRICE
+        description: Total cost of order
+        tests:
+          - not_null
+      - name: L_DISCOUNT
+        description: Discount on product.
+        tests:
+          - not_null
+      - name: L_TAX
+        description: Tax amount
+        tests:
+          - not_null
+      - name: L_RETURNFLAG
+        description: Whether the product is to be returned
+        tests:
+          - not_null
+      - name: L_LINESTATUS
+        description: Lineitem status
+        tests:
+          - not_null
+      - name: L_SHIPDATE
+        description: Lineitem transport date
+        tests:
+          - not_null
+      - name: L_COMMITDATE
+        description: Lineitem committed date
+        tests:
+          - not_null
+      - name: L_RECEIPTDATE
+        description: Lineitem receipt date
+        tests:
+          - not_null
+      - name: L_SHIPINSTRUCT
+        description: Lineitem shipping instruction
+        tests:
+          - not_null
+      - name: L_SHIPMODE
+        description: Lineitem transport means
+        tests:
+          - not_null
+      - name: L_COMMENT
+        description: Lineitem comment
+        tests:
+          - not_null
+
+  - name: stg_nation
+    description: Nation data as defined by TPC-H
+    config:
+      materialized: table
+      pre-hook: ""
+      post-hook: ""
+      database: PC_COALESCE_DB
+      schema: DBT_JANEROSE
+    columns:
+      - name: N_NATIONKEY
+        description: primary key
+        tests:
+          - unique
+          - not_null
+      - name: N_NAME
+        description: Country name.
+        tests:
+          - unique
+          - not_null
+      - name: N_REGIONKEY
+        description: Secondary key for regions table.
+        tests:
+          - not_null
+      - name: N_COMMENT
+        description: Comment
+          - unique
+          - not_null
+  
+  - name: stg_orders
+    description: Orders data as defined by TPC-H
+    config:
+      materialized: table
+      pre-hook: ""
+      post-hook: ""
+      database: PC_COALESCE_DB
+      schema: DBT_JANEROSE
+    columns:
+      - name: O_ORDERKEY
+        description: primary key
+        tests:
+          - unique
+          - not_null
+      - name: O_CUSTKEY
+        description: Secondary key for customers table.
+        tests:
+          - not_null
+      - name: O_ORDERSTATUS
+        description: Order status.
+        tests:
+          - not_null
+      - name: O_TOTALPRICE
+        description: Total order cost
+          - not_null
+      - name: O_ORDERDATE
+        description: Order date.
+        tests:
+          - not_null
+      - name: O_ORDERPRIORITY
+        description: Order priority
+          - not_null
+      - name: O_CLERK
+        description: Order Clerk
+        tests:
+          - not_null
+      - name: O_SHIPPRIORITY
+        description: Order ship priority
+          - not_null
+      - name: O_COMMENT
+        description: Comment
+          - not_null
+  
+  - name: stg_part
+    description: Part data as defined by TPC-H
+    config:
+      materialized: table
+      pre-hook: ""
+      post-hook: ""
+      database: PC_COALESCE_DB
+      schema: DBT_JANEROSE
+    columns:
+      - name: P_PARTKEY
+        description: primary key
+        tests:
+          - unique
+          - not_null
+      - name: P_NAME
+        description: Part name
+        tests:
+          - not_null
+      - name: P_MFGR
+        description: Manufacturer
+        tests:
+          - not_null
+      - name: P_BRAND
+        description: Brand
+          - not_null
+      - name: P_TYPE
+        description: Part type
+        tests:
+          - not_null
+      - name: P_SIZE
+        description: Part size
+          - not_null
+      - name: P_CONTAINER
+        description: Container
+        tests:
+          - not_null
+      - name: P_RETAILPRICE
+        description: Retail Cost
+          - not_null
+      - name: P_COMMENT
+        description: Comment
+        tests:
+          - not_null
+  
+  - name: stg_partsupp
+    description: Partsupp data as defined by TPC-H
+    config:
+      materialized: table
+      pre-hook: ""
+      post-hook: ""
+      database: PC_COALESCE_DB
+      schema: DBT_JANEROSE
+    columns:
+      - name: PS_PARTKEY
+        description: primary key
+        tests:
+          - not_null
+      - name: PS_SUPPKEY
+        description: Secondary key for suppliers table
+        tests:
+          - not_null
+      - name: PS_AVAILQTY
+        description: Quantity Available
+        tests:
+          - not_null
+      - name: PS_SUPPLYCOST
+        description: Supply cost
+          - not_null
+      - name: PS_COMMENT
+        description: Comment
+        tests:
+          - not_null
+  
+  - name: stg_region
+    description: Region data as defined by TPC-H
+    config:
+      materialized: table
+      pre-hook: ""
+      post-hook: ""
+      database: PC_COALESCE_DB
+      schema: DBT_JANEROSE
+    columns:
+      - name: R_REGIONKEY
+        description: primary key
+        tests:
+          - unique
+          - not_null
+      - name: R_NAME
+        description: Region name
+        tests:
+          - unique
+          - not_null
+      - name: R_COMMENT
+        description: Comment
+        tests:
+          - not_null
+      - name: PS_SUPPLYCOST
+        description: Supply cost
+          - not_null
+      - name: PS_COMMENT
+        description: Comment
+
+  - name: stg_supplier
+    description: Supplier data as defined by TPC-H
+    config:
+      materialized: table
+      pre-hook: ""
+      post-hook: ""
+      database: PC_COALESCE_DB
+      schema: DBT_JANEROSE
+    columns:
+      - name: S_SUPPKEY
+        description: primary key
+        tests:
+          - unique
+          - not_null
+      - name: S_NAME
+        description: Supplier name
+        tests:
+          - unique
+          - not_null
+      - name: S_ADDRESS
+        description: Supplier address.
+        tests:
+          - not_null
+      - name: S_NATIONKEY
+        description: Supplier country
+          - not_null
+      - name: S_PHONE
+        description: Supplier contacts.
+        tests:
+          - not_null
+      - name: S_ACCTBAL
+        description: Account balance
+          - not_null
+      - name: S_COMMENT
+        description: Comment
+        tests:
+          - not_null
+          
