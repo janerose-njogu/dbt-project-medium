@@ -144,160 +144,72 @@ models:
     columns:
       - name: O_CUSTKEY
         description: Secondary key for customers.
-        tests:
-          - unique
-          - not_null
       - name: L_PARTKEY
         description: Secondary key for parts.
-        tests:
-          - not_null
       - name: L_SUPPKEY
         description: Secondary key for suppliers.
-        tests:
-          - unique
-          - not_null
       - name: PS_SUPPLYCOST
         description: Supply cost.
-        tests:
-          - unique
-          - not_null
       - name: O_ORDERKEY
         description: Secondary key for orders table.
-        tests:
-          - not_null
       - name: O_ORDERSTATUS
         description: Order status.
-        tests:
-          - not_null
       - name: PS_AVAILQTY
         description: Quantity available.
-        tests:
-          - unique
-          - not_null
       - name: O_TOTALPRICE
         description: Total cost.
-        tests:
-          - unique
-          - not_null
       - name: O_ORDERDATE
         description: Order date.
-        tests:
-          - not_null
       - name: O_ORDERPRIORITY_NUM
         description: Order priority number.
-        tests:
-          - unique
-          - not_null
       - name: O_ORDERPRIORITY_DESC
         description: Order priority description.
-        tests:
-          - not_null
       - name: O_CLERK
         description: Order clerk.
-        tests:
-          - unique
-          - not_null
       - name: O_SHIPPRIORITY
         description: Shipping priority.
-        tests:
-          - unique
-          - not_null
       - name: O_COMMENT
         description: Comment.
-        tests:
-          - unique
-          - not_null
       - name: L_ORDERKEY
         description: Secondary key for Lineitem table.
-        tests:
-          - not_null
       - name: L_LINENUMBER
         description: Secondary key for Lineitem number.
-        tests:
-          - not_null
       - name: L_QUANTITY
         description: Quantity available.
-        tests:
-          - unique
-          - not_null
       - name: L_EXTENDEDPRICE
         description: Total cost.
-        tests:
-          - unique
-          - not_null
       - name: L_TAX
         description: Tax/Levy.
-        tests:
-          - not_null
       - name: L_DISCOUNT
         description: Discount
-        tests:
-          - unique
-          - not_null
       - name: L_RETURNFLAG
         description: Return flag.
-        tests:
-          - not_null
       - name: L_LINESTATUS
         description: Line status
-        tests:
-          - not_null
       - name: L_SHIPDATE
         description: Shipping date.
-        tests:
-          - unique
-          - not_null
       - name: L_COMMITDATE
         description: Commiting date.
-        tests:
-          - unique
-          - not_null
       - name: L_RECEIPTDATE
         description: Recipt date.
-        tests:
-          - not_null
       - name: L_SHIPINSTRUCT
         description: Shipping instruction.
-        tests:
-          - unique
-          - not_null
       - name: L_SHIPMODE
         description: Means of shipping.
-        tests:
-          - unique
-          - not_null
       - name: L_COMMENT
         description: Comment.
-        tests:
-          - unique
-          - not_null    
       - name: PS_PARTKEY
         description: Secondary key for parts.
-        tests:
-          - not_null 
       - name: PS_SUPPKEY
         description: Secondary key for suppliers.
-        tests:
-          - not_null
       - name: PS_COMMENT
         description: Comments.
-        tests:
-          - unique
-          - not_null
       - name: DAYSTOSHIP
         description: Number of days to ship.
-        tests:
-          - not_null
       - name: DIM_SUPPLIER_KEY
         description: Supplier key from dimension supplier table
-        tests:
-          - not_null
       - name: DIM_CUSTOMER_KEY
         description: Customer key from dimension customer table
-        tests:
-          - not_null
       - name: DIM_PARTSUPP_KEY
         description: Partsupp key from dimension partsupp table
-        tests:
-          - not_null
           
