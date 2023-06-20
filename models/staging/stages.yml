@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: STG_CUSTOMER
+  - name: stg_customers
     description: Customer data as defined by TPC-H
     config:
       materialized: table
@@ -51,7 +51,7 @@ models:
           - unique
           - not_null
   
-  - name: STG_LINEITEM
+  - name: stg_lineitem
     description: Lineitem data as defined by TPC-H
     config:
       materialized: table
@@ -141,7 +141,7 @@ models:
           - unique
           - not_null
 
-  - name: STG_NATION
+  - name: stg_nation
     description: Nation data as defined by TPC-H
     config:
       materialized: table
@@ -169,7 +169,7 @@ models:
           - unique
           - not_null
   
-  - name: STG_ORDERS
+  - name: stg_orders
     description: Orders data as defined by TPC-H
     config:
       materialized: table
@@ -213,7 +213,7 @@ models:
         description: Comment
           - not_null
   
-  - name: STG_PART
+  - name: stg_part
     description: Part data as defined by TPC-H
     config:
       materialized: table
@@ -258,7 +258,7 @@ models:
         tests:
           - not_null
   
-  - name: STG_PARTSUPP
+  - name: stg_partsupp
     description: Partsupp data as defined by TPC-H
     config:
       materialized: table
@@ -289,7 +289,7 @@ models:
         tests:
           - not_null
   
-  - name: STG_REGION
+  - name: stg_region
     description: Region data as defined by TPC-H
     config:
       materialized: table
@@ -320,7 +320,7 @@ models:
         tests:
           - not_null
 
-  - name: STG_SUPPLIER
+  - name: stg_supplier
     description: Supplier data as defined by TPC-H
     config:
       materialized: table
