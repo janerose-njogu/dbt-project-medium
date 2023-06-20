@@ -1,2 +1,2 @@
 SELECT *
-FROM {{ source("TPC-H", "customers") }}
+FROM {{ source("TPC-H", "customer") }}
