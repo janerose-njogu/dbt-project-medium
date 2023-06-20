@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: STG_LINEITEM_ORDERS
+  - name: stg_lineitem_orders
     description: Combines data from stg_orders, stg_partsupp, stg_lineitem
     config:
       materialized: table
@@ -170,7 +170,7 @@ models:
         tests:
           - not_null
   
-  - name: STG_LINEITEM_ORDERS_DIM_LOOKUP
+  - name: stg_lineitem_orders_dim_lookup
     description: Lookup table for dimension tables
     config:
       materialized: table
