@@ -7,7 +7,7 @@ models:
       materialized: table
       pre-hook: ""
       post-hook: ""
-      database: SNOWFLAKE_SAMPLE_DATA
+      database: PC_COALESCE_DB
       schema: DBT_JANEROSE
     columns:
       - name: O_CUSTKEY
@@ -176,7 +176,7 @@ models:
       materialized: table
       pre-hook: ""
       post-hook: ""
-      database: SNOWFLAKE_SAMPLE_DATA
+      database: PC_COALESCE_DB
       schema: DBT_JANEROSE
     columns:
       - name: O_CUSTKEY
