@@ -8,7 +8,7 @@ models:
       pre-hook: ""
       post-hook: ""
       database: DEV_RAW
-      schema: DBT_JANEROSE
+      schema: 
     columns:
       - name: C_CUSTKEY
         description: The primary key for customers.
@@ -54,7 +54,7 @@ models:
       pre-hook: ""
       post-hook: ""
       database: DEV_RAW
-      schema: DBT_JANEROSE
+      schema: 
     columns:
       - name: L_ORDERKEY
         description: Secondary key for orders table
@@ -128,7 +128,7 @@ models:
       pre-hook: ""
       post-hook: ""
       database: DEV_RAW
-      schema: DBT_JANEROSE
+      schema: 
     columns:
       - name: N_NATIONKEY
         description: primary key
@@ -156,7 +156,7 @@ models:
       pre-hook: ""
       post-hook: ""
       database: DEV_RAW
-      schema: DBT_JANEROSE
+      schema: 
     columns:
       - name: O_ORDERKEY
         description: primary key
@@ -199,7 +199,7 @@ models:
       pre-hook: ""
       post-hook: ""
       database: DEV_RAW
-      schema: DBT_JANEROSE
+      schema: 
     columns:
       - name: P_PARTKEY
         description: primary key
@@ -243,7 +243,7 @@ models:
       pre-hook: ""
       post-hook: ""
       database: DEV_RAW
-      schema: DBT_JANEROSE
+      schema: 
     columns:
       - name: PS_PARTKEY
         description: primary key
@@ -272,7 +272,7 @@ models:
       pre-hook: ""
       post-hook: ""
       database: DEV_RAW
-      schema: DBT_JANEROSE
+      schema: 
     columns:
       - name: R_REGIONKEY
         description: primary key
@@ -301,7 +301,7 @@ models:
       pre-hook: ""
       post-hook: ""
       database: DEV_RAW
-      schema: DBT_JANEROSE
+      schema: 
     columns:
       - name: S_SUPPKEY
         description: primary key

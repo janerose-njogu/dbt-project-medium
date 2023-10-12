@@ -8,7 +8,7 @@ models:
       pre-hook: ""
       post-hook: ""
       database: DEV_RAW
-      schema: DBT_JANEROSE
+      schema: 
     columns:
       - name: O_CUSTKEY
         description: Secondary key for customers.
@@ -140,7 +140,7 @@ models:
       pre-hook: ""
       post-hook: ""
       database: DEV_RAW
-      schema: DBT_JANEROSE
+      schema: 
     columns:
       - name: O_CUSTKEY
         description: Secondary key for customers.

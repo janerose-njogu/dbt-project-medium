@@ -8,7 +8,7 @@ models:
       pre-hook: ""
       post-hook: ""
       database: DEV_RAW
-      schema: DBT_JANEROSE
+      schema: 
     columns:
       - name: DIM_CUSTOMER_KEY
         description: The primary key for customers.
@@ -56,7 +56,7 @@ models:
       pre-hook: ""
       post-hook: ""
       database: DEV_RAW
-      schema: DBT_JANEROSE
+      schema: 
     columns:
       - name: DIM_PARTSUPP_KEY
         description: Secondary key for partsupp table
@@ -84,7 +84,7 @@ models:
       pre-hook: ""
       post-hook: ""
       database: DEV_RAW
-      schema: DBT_JANEROSE
+      schema: 
     columns:
       - name: DIM_SUPPLIER_KEY
         description: Secondary key for suppliers table
@@ -129,7 +129,7 @@ models:
       pre-hook: ""
       post-hook: ""
       database: DEV_RAW
-      schema: DBT_JANEROSE
+      schema: 
     columns:
       - name: O_CUSTKEY
         description: Secondary key for customers.
