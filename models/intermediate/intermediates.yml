@@ -7,7 +7,7 @@ models:
       materialized: table
       pre-hook: ""
       post-hook: ""
-      database: PC_COALESCE_DB
+      database: DEV_RAW
       schema: DBT_JANEROSE
     columns:
       - name: O_CUSTKEY
@@ -139,7 +139,7 @@ models:
       materialized: table
       pre-hook: ""
       post-hook: ""
-      database: PC_COALESCE_DB
+      database: DEV_RAW
       schema: DBT_JANEROSE
     columns:
       - name: O_CUSTKEY

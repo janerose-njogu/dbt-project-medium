@@ -7,7 +7,7 @@ models:
       materialized: table
       pre-hook: ""
       post-hook: ""
-      database: PC_COALESCE_DB
+      database: DEV_RAW
       schema: DBT_JANEROSE
     columns:
       - name: DIM_CUSTOMER_KEY
@@ -55,7 +55,7 @@ models:
       materialized: table
       pre-hook: ""
       post-hook: ""
-      database: PC_COALESCE_DB
+      database: DEV_RAW
       schema: DBT_JANEROSE
     columns:
       - name: DIM_PARTSUPP_KEY
@@ -83,7 +83,7 @@ models:
       materialized: table
       pre-hook: ""
       post-hook: ""
-      database: PC_COALESCE_DB
+      database: DEV_RAW
       schema: DBT_JANEROSE
     columns:
       - name: DIM_SUPPLIER_KEY
@@ -128,7 +128,7 @@ models:
       materialized: table
       pre-hook: ""
       post-hook: ""
-      database: PC_COALESCE_DB
+      database: DEV_RAW
       schema: DBT_JANEROSE
     columns:
       - name: O_CUSTKEY

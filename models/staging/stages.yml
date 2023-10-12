@@ -7,7 +7,7 @@ models:
       materialized: table
       pre-hook: ""
       post-hook: ""
-      database: PC_COALESCE_DB
+      database: DEV_RAW
       schema: DBT_JANEROSE
     columns:
       - name: C_CUSTKEY
@@ -53,7 +53,7 @@ models:
       materialized: table
       pre-hook: ""
       post-hook: ""
-      database: PC_COALESCE_DB
+      database: DEV_RAW
       schema: DBT_JANEROSE
     columns:
       - name: L_ORDERKEY
@@ -127,7 +127,7 @@ models:
       materialized: table
       pre-hook: ""
       post-hook: ""
-      database: PC_COALESCE_DB
+      database: DEV_RAW
       schema: DBT_JANEROSE
     columns:
       - name: N_NATIONKEY
@@ -155,7 +155,7 @@ models:
       materialized: table
       pre-hook: ""
       post-hook: ""
-      database: PC_COALESCE_DB
+      database: DEV_RAW
       schema: DBT_JANEROSE
     columns:
       - name: O_ORDERKEY
@@ -198,7 +198,7 @@ models:
       materialized: table
       pre-hook: ""
       post-hook: ""
-      database: PC_COALESCE_DB
+      database: DEV_RAW
       schema: DBT_JANEROSE
     columns:
       - name: P_PARTKEY
@@ -242,7 +242,7 @@ models:
       materialized: table
       pre-hook: ""
       post-hook: ""
-      database: PC_COALESCE_DB
+      database: DEV_RAW
       schema: DBT_JANEROSE
     columns:
       - name: PS_PARTKEY
@@ -271,7 +271,7 @@ models:
       materialized: table
       pre-hook: ""
       post-hook: ""
-      database: PC_COALESCE_DB
+      database: DEV_RAW
       schema: DBT_JANEROSE
     columns:
       - name: R_REGIONKEY
@@ -300,7 +300,7 @@ models:
       materialized: table
       pre-hook: ""
       post-hook: ""
-      database: PC_COALESCE_DB
+      database: DEV_RAW
       schema: DBT_JANEROSE
     columns:
       - name: S_SUPPKEY
