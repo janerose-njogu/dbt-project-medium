@@ -7,8 +7,8 @@ models:
       materialized: table
       pre-hook: ""
       post-hook: ""
-      database: PC_COALESCE_DB
-      schema: DBT_JANEROSE
+      database: DEV_RAW
+      schema: 
     columns:
       - name: O_CUSTKEY
         description: Secondary key for customers.
@@ -139,8 +139,8 @@ models:
       materialized: table
       pre-hook: ""
       post-hook: ""
-      database: PC_COALESCE_DB
-      schema: DBT_JANEROSE
+      database: DEV_RAW
+      schema: 
     columns:
       - name: O_CUSTKEY
         description: Secondary key for customers.

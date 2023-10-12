@@ -7,8 +7,8 @@ models:
       materialized: table
       pre-hook: ""
       post-hook: ""
-      database: PC_COALESCE_DB
-      schema: DBT_JANEROSE
+      database: DEV_RAW
+      schema: 
     columns:
       - name: DIM_CUSTOMER_KEY
         description: The primary key for customers.
@@ -55,8 +55,8 @@ models:
       materialized: table
       pre-hook: ""
       post-hook: ""
-      database: PC_COALESCE_DB
-      schema: DBT_JANEROSE
+      database: DEV_RAW
+      schema: 
     columns:
       - name: DIM_PARTSUPP_KEY
         description: Secondary key for partsupp table
@@ -83,8 +83,8 @@ models:
       materialized: table
       pre-hook: ""
       post-hook: ""
-      database: PC_COALESCE_DB
-      schema: DBT_JANEROSE
+      database: DEV_RAW
+      schema: 
     columns:
       - name: DIM_SUPPLIER_KEY
         description: Secondary key for suppliers table
@@ -128,8 +128,8 @@ models:
       materialized: table
       pre-hook: ""
       post-hook: ""
-      database: PC_COALESCE_DB
-      schema: DBT_JANEROSE
+      database: DEV_RAW
+      schema: 
     columns:
       - name: O_CUSTKEY
         description: Secondary key for customers.

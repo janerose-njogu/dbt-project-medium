@@ -7,8 +7,8 @@ models:
       materialized: table
       pre-hook: ""
       post-hook: ""
-      database: PC_COALESCE_DB
-      schema: DBT_JANEROSE
+      database: DEV_RAW
+      schema: 
     columns:
       - name: C_CUSTKEY
         description: The primary key for customers.
@@ -53,8 +53,8 @@ models:
       materialized: table
       pre-hook: ""
       post-hook: ""
-      database: PC_COALESCE_DB
-      schema: DBT_JANEROSE
+      database: DEV_RAW
+      schema: 
     columns:
       - name: L_ORDERKEY
         description: Secondary key for orders table
@@ -127,8 +127,8 @@ models:
       materialized: table
       pre-hook: ""
       post-hook: ""
-      database: PC_COALESCE_DB
-      schema: DBT_JANEROSE
+      database: DEV_RAW
+      schema: 
     columns:
       - name: N_NATIONKEY
         description: primary key
@@ -155,8 +155,8 @@ models:
       materialized: table
       pre-hook: ""
       post-hook: ""
-      database: PC_COALESCE_DB
-      schema: DBT_JANEROSE
+      database: DEV_RAW
+      schema: 
     columns:
       - name: O_ORDERKEY
         description: primary key
@@ -198,8 +198,8 @@ models:
       materialized: table
       pre-hook: ""
       post-hook: ""
-      database: PC_COALESCE_DB
-      schema: DBT_JANEROSE
+      database: DEV_RAW
+      schema: 
     columns:
       - name: P_PARTKEY
         description: primary key
@@ -242,8 +242,8 @@ models:
       materialized: table
       pre-hook: ""
       post-hook: ""
-      database: PC_COALESCE_DB
-      schema: DBT_JANEROSE
+      database: DEV_RAW
+      schema: 
     columns:
       - name: PS_PARTKEY
         description: primary key
@@ -271,8 +271,8 @@ models:
       materialized: table
       pre-hook: ""
       post-hook: ""
-      database: PC_COALESCE_DB
-      schema: DBT_JANEROSE
+      database: DEV_RAW
+      schema: 
     columns:
       - name: R_REGIONKEY
         description: primary key
@@ -300,8 +300,8 @@ models:
       materialized: table
       pre-hook: ""
       post-hook: ""
-      database: PC_COALESCE_DB
-      schema: DBT_JANEROSE
+      database: DEV_RAW
+      schema: 
     columns:
       - name: S_SUPPKEY
         description: primary key
