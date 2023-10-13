@@ -13,265 +13,265 @@ sources:
           - name: C_ACCTBAL
             description: Account balance
             tests:
-                - not_null
+              - not_null
           - name: C_ADDRESS
             description: Customer address
             tests:
-                - not_null
+              - not_null
           - name: C_COMMENT
             description: Comment left by customer
             tests:
-                - not_null
+              - not_null
           - name: C_CUSTKEY
             description: Customer primary key
             tests:
-                - not_null
+              - not_null
           - name: C_MKTSEGMENT
             description: Market segments
             tests:
-                - not_null
+              - not_null
           - name: C_NAME
             description: name
             tests:
-                - not_null
+              - not_null
           - name: C_NATIONKEY
             description: Foreign key for nation table
             tests:
-                - not_null
+              - not_null
           - name: C_PHONE
             description: Phone number
             tests:
-                - not_null
+              - not_null
       - name: orders
         description: Orders data as defined by TPC-H
         columns:
           - name: O_CLERK
             description: Clerk number
             tests:
-                - not_null
+              - not_null
           - name: O_COMMENT
             description: Comment
             tests:
-                - not_null
+              - not_null
           - name: O_CUSTKEY
             description: Foreign key for customers table
             tests:
-                - not_null
+              - not_null
           - name: O_ORDERDATE
             description: Order date
             tests:
-                - not_null
+              - not_null
           - name: O_ORDERKEY
             description: Primary key
             tests:
-                - not_null
+              - not_null
           - name: O_ORDERPRIORITY
             description: Priority e.g. 5-LOW, 1-URGENT
             tests:
-                - not_null
+              - not_null
           - name: O_ORDERSTATUS
             description: Order Status e.g. fulfilled or open
             tests:
-                - not_null
+              - not_null
           - name: O_SHIPPRIORITY
             description: Shipping priority
             tests:
-                - not_null
+              - not_null
           - name: O_TOTALPRICE
             description: Total order cost inclusive of shipping
             tests:
-                - not_null
+              - not_null
       - name: lineitem
         description: Lineitem data as defined by TPC-H
         columns:
           - name: L_COMMENT
             description: Comment on lineitem
             tests:
-                - not_null
+              - not_null
           - name: L_COMMITDATE
             description: final date on which a line item is committed to a financial statement
             tests:
-                - not_null
+              - not_null
           - name: L_DISCOUNT
             description: Discount on lineitem
             tests:
-                - not_null
+              - not_null
           - name: L_EXTENDEDPRICE
             description: Extended price
             tests:
-                - not_null
+              - not_null
           - name: L_LINENUMBER
             description: Line number
             tests:
-                - not_null
+              - not_null
           - name: L_LINESTATUS
             description: Status
             tests:
-                - not_null
+              - not_null
           - name: L_ORDERKEY
             description: Foreign key for orders table
             tests:
-                - not_null
+              - not_null
           - name: L_PARTKEY
             description: Foreign key for parts table
             tests:
-                - not_null
+              - not_null
           - name: L_QUANTITY
             description: The number of lineitems
             tests:
-                - not_null
+              - not_null
           - name: L_RECEIPTDATE
             description: The date on the receipt
             tests:
-                - not_null
+              - not_null
           - name: L_RETURNFLAG
             description: The return flag
             tests:
-                - not_null
+              - not_null
           - name: L_SHIPDATE
             description: The shipping date
             tests:
-                - not_null
+              - not_null
           - name: L_SHIPINSTRUCT
             description: Instructions on what should be done after lineitem is shipped
             tests:
-                - not_null
+              - not_null
           - name: L_SHIPMODE
             description: The means of transport employed during shipping
             tests:
-                - not_null
+              - not_null
           - name: L_SUPPKEY
             description: Foreign key for Suppliers table
             tests:
-                - not_null
+              - not_null
           - name: L_TAX
             description: The tax on the lineitems
             tests:
-                - not_null
+              - not_null
       - name: nation
         description: Nation data as defined by TPC-H
         columns:
           - name: N_COMMENT
             description: Comments
             tests:
-                - not_null
+              - not_null
           - name: N_NAME
             description: Country e.g. Japan, Egypt
             tests:
-                - not_null
+              - not_null
           - name: N_NATIONKEY
             description: Primary key
             tests:
-                - not_null
+              - not_null
           - name: N_REGIONKEY
             description: Foreign key for regions table
             tests:
-                - not_null
+              - not_null
       - name: part
         description: Parts data as defined by TPC-H
         columns:
           - name: P_BRAND
             description: Brand
             tests:
-                - not_null
+              - not_null
           - name: P_COMMENT
             description: Comments
             tests:
-                - not_null
+              - not_null
           - name: P_CONTAINER
             description: Primary key
             tests:
-                - not_null
+              - not_null
           - name: P_MFGR
             description: Part manufacturer
             tests:
-                - not_null
+              - not_null
           - name: P_NAME
             description: Part name
             tests:
-                - not_null
+              - not_null
           - name: P_PARTKEY
             description: Primary key
             tests:
-                - not_null
+              - not_null
           - name: P_RETAILPRICE
             description: Retail selling price
             tests:
-                - not_null
+              - not_null
           - name: P_SIZE
             description: Part size
             tests:
-                - not_null
+              - not_null
           - name: P_TYPE
             description: Category
             tests:
-                - not_null
+              - not_null
       - name: partsupp
         description: Partsupp data as defined by TPC-H
         columns:
           - name: PS_AVAILQTY
             description: Quantity available at Supplier
             tests:
-                - not_null
+              - not_null
           - name: PS_COMMENT
             description: Comments
             tests:
-                - not_null
+              - not_null
           - name: PS_PARTKEY
             description: Foreign key for parts table
             tests:
-                - not_null
+              - not_null
           - name: PS_SUPPKEY
             description: Foreign key for suppliers table
             tests:
-                - not_null
+              - not_null
           - name: PS_SUPPLYCOST
             description: Cost of supplying
             tests:
-                - not_null
+              - not_null
       - name: region
         description: Region data as defined by TPC-H
         columns:
           - name: R_COMMENT
             description: Comments
             tests:
-                - not_null
+              - not_null
           - name: R_NAME
             description: Region name
             tests:
-                - not_null
+              - not_null
           - name: R_REGIONKEY
             description: Primary key
             tests:
-                - not_null
+              - not_null
       - name: supplier
         description: Supplier data as defined by TPC-H
         columns:
           - name: S_ACCTBAL
             description: Supplier account balance
             tests:
-                - not_null
+              - not_null
           - name: S_ADDRESS
             description: Supplier address
             tests:
-                - not_null
+              - not_null
           - name: S_COMMENT
             description: Comments
             tests:
-                - not_null
+              - not_null
           - name: S_NAME
             description: Supplier name
             tests:
-                - not_null
+              - not_null
           - name: S_NATIONKEY
             description: Foreign key for nations table
             tests:
-                - not_null
+              - not_null
           - name: S_PHONE
             description: Supplier phone number
             tests:
-                - not_null
+              - not_null
           - name: S_SUPPKEY
             description: Primary key
             tests:
-                - not_null
+              - not_null

@@ -1,6 +1,8 @@
-SELECT *
-FROM {{ ref('stg_lineitem') }} AS STG_LINEITEM
-INNER JOIN {{ ref('stg_orders') }} AS STG_ORDERS
-ON STG_LINEITEM.L_ORDERKEY = STG_ORDERS.O_ORDERKEY
-INNER JOIN {{ ref('stg_partsupp') }} AS STG_PARTSUPP
-ON STG_LINEITEM.L_PARTKEY = STG_PARTSUPP.PS_PARTKEY
+select *
+from {{ ref("stg_lineitem") }} as stg_lineitem
+inner join
+    {{ ref("stg_orders") }} as stg_orders
+    on stg_lineitem.l_orderkey = stg_orders.o_orderkey
+inner join
+    {{ ref("stg_partsupp") }} as stg_partsupp
+    on stg_lineitem.l_partkey = stg_partsupp.ps_partkey

@@ -8,7 +8,7 @@ models:
       pre-hook: ""
       post-hook: ""
       database: DEV_RAW
-      schema: 
+      schema:
     columns:
       - name: O_CUSTKEY
         description: Secondary key for customers.
@@ -117,11 +117,11 @@ models:
       - name: L_COMMENT
         description: Comment.
         tests:
-          - not_null    
+          - not_null
       - name: PS_PARTKEY
         description: Secondary key for parts.
         tests:
-          - not_null 
+          - not_null
       - name: PS_SUPPKEY
         description: Secondary key for suppliers.
         tests:
@@ -132,7 +132,7 @@ models:
           - not_null
       - name: DAYSTOSHIP
         description: Number of days to ship.
-  
+
   - name: stg_lineitem_orders_dim_lookup
     description: Lookup table for dimension tables
     config:
@@ -140,7 +140,7 @@ models:
       pre-hook: ""
       post-hook: ""
       database: DEV_RAW
-      schema: 
+      schema:
     columns:
       - name: O_CUSTKEY
         description: Secondary key for customers.
@@ -212,4 +212,3 @@ models:
         description: Customer key from dimension customer table
       - name: DIM_PARTSUPP_KEY
         description: Partsupp key from dimension partsupp table
-          

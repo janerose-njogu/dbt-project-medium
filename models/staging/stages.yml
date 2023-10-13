@@ -8,7 +8,7 @@ models:
       pre-hook: ""
       post-hook: ""
       database: DEV_RAW
-      schema: 
+      schema:
     columns:
       - name: C_CUSTKEY
         description: The primary key for customers.
@@ -46,7 +46,7 @@ models:
         description: Customer comment.
         tests:
           - not_null
-  
+
   - name: stg_lineitem
     description: Lineitem data as defined by TPC-H
     config:
@@ -54,7 +54,7 @@ models:
       pre-hook: ""
       post-hook: ""
       database: DEV_RAW
-      schema: 
+      schema:
     columns:
       - name: L_ORDERKEY
         description: Secondary key for orders table
@@ -128,7 +128,7 @@ models:
       pre-hook: ""
       post-hook: ""
       database: DEV_RAW
-      schema: 
+      schema:
     columns:
       - name: N_NATIONKEY
         description: primary key
@@ -148,7 +148,7 @@ models:
         description: Comment
           - unique
           - not_null
-  
+
   - name: stg_orders
     description: Orders data as defined by TPC-H
     config:
@@ -156,7 +156,7 @@ models:
       pre-hook: ""
       post-hook: ""
       database: DEV_RAW
-      schema: 
+      schema:
     columns:
       - name: O_ORDERKEY
         description: primary key
@@ -191,7 +191,7 @@ models:
       - name: O_COMMENT
         description: Comment
           - not_null
-  
+
   - name: stg_part
     description: Part data as defined by TPC-H
     config:
@@ -199,7 +199,7 @@ models:
       pre-hook: ""
       post-hook: ""
       database: DEV_RAW
-      schema: 
+      schema:
     columns:
       - name: P_PARTKEY
         description: primary key
@@ -235,7 +235,7 @@ models:
         description: Comment
         tests:
           - not_null
-  
+
   - name: stg_partsupp
     description: Partsupp data as defined by TPC-H
     config:
@@ -243,7 +243,7 @@ models:
       pre-hook: ""
       post-hook: ""
       database: DEV_RAW
-      schema: 
+      schema:
     columns:
       - name: PS_PARTKEY
         description: primary key
@@ -264,7 +264,7 @@ models:
         description: Comment
         tests:
           - not_null
-  
+
   - name: stg_region
     description: Region data as defined by TPC-H
     config:
@@ -272,7 +272,7 @@ models:
       pre-hook: ""
       post-hook: ""
       database: DEV_RAW
-      schema: 
+      schema:
     columns:
       - name: R_REGIONKEY
         description: primary key
@@ -301,7 +301,7 @@ models:
       pre-hook: ""
       post-hook: ""
       database: DEV_RAW
-      schema: 
+      schema:
     columns:
       - name: S_SUPPKEY
         description: primary key
@@ -331,4 +331,3 @@ models:
         description: Comment
         tests:
           - not_null
-          
